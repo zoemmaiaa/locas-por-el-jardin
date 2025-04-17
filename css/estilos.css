@@ -16,7 +16,7 @@
     height: 500px;
     display: flex;
     align-items: center;
-    background: url(/assets/floramarilla.jpg);
+    background: url(../assets/floramarilla.jpg);
     background-size: cover;
     background-position: center;
     
@@ -38,24 +38,25 @@ h2 {
     font-style: normal;
     text-align: center;
     background-color: rgb(133, 116, 116);
+    font-size: 60px;
     margin-top: 100px;
-    width: 70%;
-    height: 70px;
+    width: 75%;
+    height: 100px;
     padding-top: 15px;
 }
 
 
 .bloq__txtimg {
     display: flex;
-    justify-content: space-between; /* Espacia el texto y la imagen */
-    align-items: center; /* Centra verticalmente si las alturas son diferentes */
-    gap: 40px; /* Espacio entre texto e imagen */
+    justify-content: space-between;
+    align-items: center; 
+    gap: 40px; 
     padding: 20px;
   }
   
   .bloq__txtimg p {
     flex: 1;
-    font-size: 20px;
+    font-size: 30px;
     padding-top: 50px;
   }
   
@@ -87,7 +88,7 @@ h2 {
     height: 500px;
     display: flex;
     align-items: center;
-    background: url(/assets/plantando.jpg);
+    background: url(../assets/plantando.jpg);
     background-size: cover;
     background-position: center;
     justify-content: center;
@@ -108,7 +109,7 @@ h2 {
     width: 100%;
     padding: 40px 20px;
     background-color: #f9f9f9; 
-    background-size: cover; /* Fondo claro para el área de las tarjetas */
+    background-size: cover; 
    display: flex;
    flex-direction: column;
    flex-wrap: wrap;
@@ -117,9 +118,9 @@ h2 {
 .bloq__tarjetas {
     display: grid;
     grid-template-columns: repeat(2,1fr);
-    grid-template-rows: repeat(2,1fr); /* Centra las tarjetas */
+    grid-template-rows: repeat(2,1fr);
     gap: 200px; 
-    margin: 150px; /* Espacio entre tarjetas */
+    margin: 150px; 
 }
 
 
@@ -131,7 +132,7 @@ h2 {
         height: 500px;
         display: flex;
         align-items: center;
-        background: url(/assets/tulipan.jpg);
+        background: url(../assets/tulipan.jpg);
         background-size: cover;
         background-position: center;
         justify-content: start;
