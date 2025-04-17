@@ -1,0 +1,150 @@
+.navbar_z  {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    font-size: 25px;
+    font-family: "Merriweather", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+
+.bloque {
+    width: auto;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    background: url(/assets/floramarilla.jpg);
+    background-size: cover;
+    background-position: center;
+    
+}
+
+.bloque h1 {
+    width: 100px;
+    margin: 15px;
+    font-size: 80px;
+    color: white;
+    font-family: "Abril Fatface", serif;
+    font-style: normal;
+}
+
+h2 {
+    font-family: "Merriweather", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    text-align: center;
+    background-color: rgb(133, 116, 116);
+    margin-top: 100px;
+    width: 70%;
+    height: 70px;
+    padding-top: 15px;
+}
+
+
+.bloq__txtimg {
+    display: flex;
+    justify-content: space-between; /* Espacia el texto y la imagen */
+    align-items: center; /* Centra verticalmente si las alturas son diferentes */
+    gap: 40px; /* Espacio entre texto e imagen */
+    padding: 20px;
+  }
+  
+  .bloq__txtimg p {
+    flex: 1;
+    font-size: 20px;
+    padding-top: 50px;
+  }
+  
+  .bloq__txtimg img {
+    flex: 1;
+    max-width: 400px;
+    height: auto;
+    object-fit: cover;
+    margin: 40px;
+  }
+
+.bloque__aside {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 150px;
+}
+
+.pie {
+     
+     height: 50px;
+     width: 100%;
+     background-color: rgb(133, 116, 116);
+}
+
+/* SERVICIOS */
+
+.bloq__servicios {
+    width: auto;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    background: url(/assets/plantando.jpg);
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+   
+}
+
+.bloq__servicios h1 {
+    width: auto;
+    margin: 15px;
+    font-size: 80px;
+    color: white;
+    font-family: "Merriweather", serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.bloq__tarjetas-container {
+    width: 100%;
+    padding: 40px 20px;
+    background-color: #f9f9f9; 
+    background-size: cover; /* Fondo claro para el área de las tarjetas */
+   display: flex;
+   flex-direction: column;
+   flex-wrap: wrap;
+}
+
+.bloq__tarjetas {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr); /* Centra las tarjetas */
+    gap: 200px; 
+    margin: 150px; /* Espacio entre tarjetas */
+}
+
+
+/* CONTACTO */
+
+.bloq__contacto {
+    
+        width: auto;
+        height: 500px;
+        display: flex;
+        align-items: center;
+        background: url(/assets/tulipan.jpg);
+        background-size: cover;
+        background-position: center;
+        justify-content: start;
+       
+
+}
+
+.bloq__contacto h1 {
+    width: auto;
+    margin: 15px;
+    font-size: 80px;
+    color: white;
+    font-family: "Merriweather", serif;
+    font-weight: 300;
+    font-style: normal;
+}
