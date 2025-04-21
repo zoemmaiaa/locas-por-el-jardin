@@ -39,7 +39,7 @@
     gap: 40px;
     padding: 40px;
     background-color: #f9f9f9;
-    flex-wrap: wrap; /* Para que se adapte a mobile */
+    flex-wrap: wrap; 
   }
   
   .bloq__txtimg img {
@@ -51,9 +51,7 @@
     margin: 20px;
   }
   
-  .bloq__txtimg {
-    flex: 2;
-  }
+  
   
   .bloq__txtimg h2 {
     font-family: "Merriweather", serif;
@@ -67,15 +65,22 @@
   
   
   .bloq__txtimg p {
+    font-family: "Merriweather", serif;
+    font-weight: 300;
     font-size: 20px;
     line-height: 1.8;
     color: #555;
     padding: 30px;
+   
+   
   }
   
   .carruselyo {
-    max-width: 1500px; /* o el tamaño que quieras */
-    margin: 40px auto; /* centrado horizontal */
+    max-width: 1000px;
+    margin: 20px  auto; 
+    margin-top: 10px;
+    margin-bottom: 100px;
+   
   }
   
   .carruselyo .carousel-inner img {
@@ -85,19 +90,117 @@
     border-radius: 10px;
   }
   
-.bloque__aside {
-    display: flex;
-    justify-content: flex-end;
-    margin-bottom: 150px;
+ 
+.contenedores__check {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 100px;
+}
+.contenedor__check_item {
+  text-align: center;
+  width: 350px;
+  height: 450px;
+  border: 1px solid rgb(196, 196, 196);
+  border-radius: 8px;
+ 
 }
 
-.pie {
-     
-     height: 50px;
-     width: 100%;
-     background-color: rgb(133, 116, 116);
+
+.contenedor__check_item h4 {
+    font-size: 60px;
+    margin-top: 15px;
+    color: #555;
 }
 
+.contenedor__check_item p {
+  font-size: 20px;
+  padding: 40px;
+}
+
+/* Media Queries, Pagina Index */
+@media (max-width: 1200px) {
+  .bloq__txtimg h2 {
+      font-size: 40px;
+  }
+  .bloq__txtimg p {
+      font-size: 18px;
+  }
+  .bloque h1 {
+      font-size: 60px;
+  }
+  .contenedor__check_item {
+      width: 45%;
+  }
+}
+
+@media (max-width: 992px) {
+  .bloq__txtimg {
+      flex-direction: column;
+      gap: 20px;
+      padding: 20px;
+  }
+  .bloq__txtimg h2 {
+      font-size: 35px;
+  }
+  .bloq__txtimg p {
+      font-size: 16px;
+  }
+  .bloque h1 {
+      font-size: 50px;
+  }
+  .contenedor__check_item {
+      width: 48%;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar_z {
+      font-size: 20px;
+  }
+  .bloque h1 {
+      font-size: 40px;
+  }
+  .bloq__txtimg {
+      padding: 10px;
+  }
+  .bloq__txtimg h2 {
+      font-size: 30px;
+  }
+  .bloq__txtimg p {
+      font-size: 14px;
+  }
+  .contenedor__check_item {
+      width: 100%;
+      margin-bottom: 20px;
+  }
+  .carruselyo {
+      margin: 10px auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .bloque h1 {
+      font-size: 30px;
+  }
+  .bloq__txtimg h2 {
+      font-size: 25px;
+  }
+  .bloq__txtimg p {
+      font-size: 14px;
+      padding: 10px;
+  }
+  .contenedor__check_item {
+      width: 100%;
+      margin-bottom: 15px;
+  }
+  .carruselyo .carousel-inner img {
+      height: 300px;
+  }
+}
 /* SERVICIOS */
 
 .bloq__servicios {
@@ -134,13 +237,101 @@
 
 .bloq__tarjetas {
     display: grid;
+    justify-content: center;
     grid-template-columns: repeat(2,1fr);
     grid-template-rows: repeat(2,1fr);
     gap: 200px; 
-    margin: 150px; 
+    margin: 0 auto 60px auto;
+}
+.bloq_tarjetas-container
+.tabla__contenedor {
+  background-color: #f9f9f9;
+}
+table {
+  width: 80%; 
+  margin: 80px auto; 
+  background-color: #ffffff;
+  border-radius: 10px;
 }
 
 
+th, td {
+  padding: 20px 30px;
+  text-align: left;
+}
+
+th {
+  color: white;
+  font-size: 1.2em;
+}
+
+td {
+  border-top: 1px solid #e0e0e0;
+  font-size: 1.1em;
+}
+
+td.check {
+  text-align: center;
+  font-size: 1.5em;
+  color: #555;
+}
+
+/* Media Queries, Pagina Servicios */
+
+@media (max-width: 768px) {
+  .bloq__servicios {
+      height: 400px;
+  }
+
+  .bloq__servicios h1 {
+      font-size: 60px;
+  }
+
+ 
+  .bloq__tarjetas {
+      grid-template-columns: 1fr;
+      gap: 20px; 
+  }
+
+  table {
+      width: 90%;
+  }
+
+  th, td {
+      padding: 15px;
+  }
+
+  td.check {
+      font-size: 1.2em;
+  }
+}
+
+@media (max-width: 480px) {
+  .bloq__servicios {
+      height: 300px;
+  }
+
+  .bloq__servicios h1 {
+      font-size: 40px;
+  }
+
+  .bloq__tarjetas {
+      grid-template-columns: 1fr; 
+      gap: 15px; 
+  }
+
+  table {
+      width: 95%; 
+  }
+
+  th, td {
+      padding: 10px; 
+  }
+
+  td.check {
+      font-size: 1em; 
+  }
+}
 /* CONTACTO */
 
 .bloq__contacto {
@@ -167,34 +358,216 @@
     font-style: normal;
 }
 
-.presupuesto h2 {
-    background-color: #f9f9f9;
-}
 .presupuesto {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 100px;
-    background-color: #f9f9f9;
-    width: 100%;
-    height: 800px;
+  background-color: #f9f9f9;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.presupuesto__form {
-    width: 900px;
-    height: 800px;
-    background-color: rgba(0, 0, 0, 0.096);
-    border: 1px solid rgb(54, 53, 53);
-    padding: 50px;
-    
+.presupuesto form {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 700px;
 }
 
-.bloq__listo {
-    background: url(../assets/tulipan.jpg);
-    width: 1000px;
-    height: 400px;
+.presupuesto h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2em;
+  color: #333;
+  font-family: "Merriweather", serif;
+  font-weight: 300;
 }
+
+.presupuesto label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+  color: #444;
+  font-family: "Merriweather", serif;
+  font-weight: 300;
+}
+
+.presupuesto input,
+.presupuesto select,
+.presupuesto textarea {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1em;
+  font-family: "Merriweather", serif;
+  font-weight: 300;
+}
+
+.presupuesto textarea {
+  resize: vertical;
+}
+
+.presupuesto .form-floating label {
+  font-weight: normal;
+  color: #777;
+}
+
 .pie {
+     
+  height: 180px;
+  width: 100%;
+  background-color: rgb(138, 110, 110);
+}
+/*Media queries, pagina contacto */
 
+/* Estilo básico para la versión de escritorio */
+
+.bloq__contacto {
+  width: auto;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  background: url(../assets/tulipan.jpg);
+  background-size: cover;
+  background-position: center;
+  justify-content: start;
+}
+
+.bloq__contacto h1 {
+  width: auto;
+  margin: 15px;
+  font-size: 80px;
+  color: white;
+  font-family: "Merriweather", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.presupuesto {
+  background-color: #f9f9f9;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.presupuesto form {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 700px;
+}
+
+.presupuesto h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2em;
+  color: #333;
+  font-family: "Merriweather", serif;
+  font-weight: 300;
+}
+
+.presupuesto label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+  color: #444;
+  font-family: "Merriweather", serif;
+  font-weight: 300;
+}
+
+.presupuesto input,
+.presupuesto select,
+.presupuesto textarea {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1em;
+  font-family: "Merriweather", serif;
+  font-weight: 300;
+}
+
+.presupuesto textarea {
+  resize: vertical;
+}
+
+.presupuesto .form-floating label {
+  font-weight: normal;
+  color: #777;
+}
+
+/* Media Queries para Pantallas Pequeñas (Tabletas y móviles) */
+
+@media (max-width: 1024px) {
+  .bloq__contacto h1 {
+      font-size: 60px;
+  }
+
+  .presupuesto {
+      padding: 40px 20px;
+  }
+
+  .presupuesto form {
+      max-width: 600px;
+  }
+
+  .presupuesto h2 {
+      font-size: 1.8em;
+  }
+}
+
+@media (max-width: 768px) {
+  .bloq__contacto {
+      height: 400px;
+  }
+
+  .bloq__contacto h1 {
+      font-size: 50px;
+  }
+
+  .presupuesto form {
+      padding: 30px;
+  }
+
+  .presupuesto h2 {
+      font-size: 1.6em;
+  }
+
+  .presupuesto input,
+  .presupuesto select,
+  .presupuesto textarea {
+      font-size: 0.95em;
+  }
+}
+
+@media (max-width: 480px) {
+  .bloq__contacto {
+      height: 350px;
+  }
+
+  .bloq__contacto h1 {
+      font-size: 40px;
+  }
+
+  .presupuesto form {
+      padding: 20px;
+  }
+
+  .presupuesto h2 {
+      font-size: 1.4em;
+  }
+
+  .presupuesto input,
+  .presupuesto select,
+  .presupuesto textarea {
+      font-size: 0.9em;
+      padding: 8px 12px;
+  }
 }
